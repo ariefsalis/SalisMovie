@@ -51,15 +51,14 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
         try {
             Picasso.with(viewHolder.itemView.getContext())
                     .load(movieList.get(i).getPosterPath())
+                    .placeholder(R.drawable.ic_launcher_background)
                     .into(viewHolder.thumbnail_view);
         }
         catch (Exception e){
             Log.e("Exception",e.getMessage());
         }
 
-
-
-        Log.d("wew ", "" + movieList.get(i).getPosterPath());
+        Log.i("wew ", "" + movieList.get(i).getPosterPath());
     }
 
     @Override

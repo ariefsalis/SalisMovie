@@ -1,7 +1,6 @@
 package com.salis.salismovie;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
@@ -50,7 +49,7 @@ public class DetailActivity extends AppCompatActivity {
             String dateOfRelease = getIntent().getExtras().getString("release_date");
 
             Picasso.with(this)
-                    .load("https://image.tmbd.org/t/p/w500"+thumbnail)
+                    .load(thumbnail)
                     .placeholder(R.drawable.load)
                     .into(imageView);
 
